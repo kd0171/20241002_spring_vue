@@ -1,4 +1,7 @@
 import { createApp } from 'vue';
-import TodoApp from './components/TodoApp.vue';
+import App from './App.vue';
+import router from './router';  // 追加: ルーターのインポート
 
-createApp(TodoApp).mount('#app');
+const app = createApp(App);
+app.use(router);                // 追加: ルーターを Vue アプリケーションに登録
+app.mount('#app');
